@@ -1,0 +1,13 @@
+{%- comment -%}
+  Wordmark lockup: the filmstrip mark as an image, the name as live text so it
+  can be scaled independently. include.size = "lg" for the footer variant.
+{%- endcomment -%}
+<span class="brand{% if include.size %} brand--{{ include.size }}{% endif %}">
+  <img class="brand__mark"
+       src="{{ '/assets/img/site/logo-icon.png' | relative_url }}"
+       alt="" aria-hidden="true" width="143" height="167">
+  <span class="brand__text">
+    <span class="brand__name">Force</span>
+    <span class="brand__kind">Productions</span>
+  </span>
+</span>

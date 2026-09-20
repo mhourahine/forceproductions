@@ -16,18 +16,59 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 5.5rem;
+  min-height: 6.75rem;
 }
 
 .masthead__logo {
   display: block;
-  line-height: 0;
+  text-decoration: none;
+  color: var(--paper);
 }
 
-.masthead__logo img {
+// ---------- Wordmark lockup ----------
+// The filmstrip mark stays an image; the name is live text so it can be
+// sized independently. --mark-h drives the whole lockup.
+.brand {
+  --mark-h: clamp(3.1rem, 2.1rem + 3.2vw, 4.6rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.brand--lg { --mark-h: 5rem; }
+
+.brand__mark {
   width: auto;
-  height: clamp(2.4rem, 1.6rem + 2.2vw, 3.4rem);
+  height: var(--mark-h);
   filter: invert(1);           // source mark is black; site is dark
+  flex: none;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: calc(var(--mark-h) * 0.72);
+  line-height: 0.86;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
+.brand__kind {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: calc(var(--mark-h) * 0.168);
+  line-height: 1;
+  letter-spacing: 0.355em;
+  text-transform: uppercase;
+  margin-top: 0.35em;
+  // The tracking adds a trailing space; pull it back so the right edge
+  // lines up with the E of FORCE.
+  margin-right: -0.355em;
 }
 
 .nav {
@@ -130,9 +171,4 @@
   }
 }
 
-.footer__logo img {
-  height: 2.6rem;
-  width: auto;
-  filter: invert(1);
-  opacity: 0.8;
-}
+.footer__logo .brand { opacity: 0.85; }

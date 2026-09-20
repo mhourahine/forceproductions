@@ -25,8 +25,7 @@
 <header class="masthead">
   <div class="shell masthead__inner">
     <a class="masthead__logo" href="#top" aria-label="{{ site.title }} — home">
-      <img src="{{ '/assets/img/site/logo-full.png' | relative_url }}"
-           alt="{{ site.title }}" width="587" height="251">
+      {% include brand.html %}
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#work">Work</a>
@@ -44,9 +43,8 @@
 <footer class="footer">
   <div class="shell footer__inner">
     <div class="footer__logo">
-      <img src="{{ '/assets/img/site/logo-full.png' | relative_url }}"
-           alt="{{ site.title }}" width="587" height="251">
-      <p style="margin-top:1rem">
+      {% include brand.html size="lg" %}
+      <p style="margin-top:1.25rem">
         Video production in {{ site.locality }}, {{ site.region }}.<br>
         &copy; {{ 'now' | date: "%Y" }} {{ site.title }}.
       </p>
