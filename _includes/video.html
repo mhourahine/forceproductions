@@ -10,7 +10,7 @@
      data-title="{{ include.item.title | escape }}"
      aria-label="Play “{{ include.item.title | escape }}”">
   <img class="vid__poster"
-       src="{{ include.item.poster | relative_url }}"
+       src="{{ include.item.poster | remove_first: '/' }}"
        alt="Still frame from {{ include.item.title | escape }}"
        width="1280" height="720"
        {% unless include.eager %}loading="lazy" decoding="async"{% endunless %}>

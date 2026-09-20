@@ -132,6 +132,22 @@ Then open <http://127.0.0.1:4000>.
 > bundle install
 > ```
 
+## Previewing before DNS switches over
+
+The same build works both at `forceproductions.ca` and at the GitHub project
+URL (`https://<user>.github.io/forceproductions/`), because every asset path in
+the templates is **relative** — `assets/css/main.css`, not `/assets/css/main.css`.
+A leading slash would resolve to the domain root and 404 on the project URL.
+
+**Keep `baseurl` empty in `_config.yml`**, and write new asset paths without a
+leading slash. Paths stored in `_data/` keep their leading slash for
+readability; the templates strip it with `| remove_first: '/'`.
+
+While previewing on github.io, the page still declares
+`forceproductions.ca` as its canonical URL and its structured data still points
+there. That is intentional — it keeps search engines pointed at the real domain —
+but it means the preview URL is not meant to be indexed or shared widely.
+
 ## How it deploys
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site

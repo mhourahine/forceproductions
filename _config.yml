@@ -12,6 +12,10 @@ description: >-
   positive change.
 
 url: "https://forceproductions.ca"
+
+# Leave baseurl empty. Asset paths in the templates are RELATIVE (no leading
+# slash) on purpose, so the same build works both at the real domain and at a
+# GitHub project URL like https://<user>.github.io/forceproductions/.
 baseurl: ""
 lang: en-CA
 
@@ -56,4 +60,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/site/og-image.jpg
+      image: /assets/img/site/hero.jpg
