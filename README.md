@@ -153,15 +153,21 @@ but it means the preview URL is not meant to be indexed or shared widely.
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
 and publishes it to GitHub Pages.
 
-**One-time setup in the repo settings:** under *Settings → Pages*, set *Source*
-to **GitHub Actions**. Then point the domain's DNS at GitHub:
+*Settings → Pages → Source* is set to **GitHub Actions** (done). Leave it
+there. The alternative, "Deploy from a branch", makes GitHub build the site
+with its own pinned Jekyll 3.9 and libsass, which cannot compile this
+stylesheet — the site deploys unstyled.
+
+To point the domain at GitHub:
 
 - Four `A` records for `forceproductions.ca` → `185.199.108.153`,
   `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 - A `CNAME` record for `www` → `<username>.github.io`
 
-Once DNS resolves, tick **Enforce HTTPS** in *Settings → Pages*. The `CNAME`
-file in this repo already holds the domain.
+Once DNS resolves, set the custom domain in *Settings → Pages* (which
+recreates the `CNAME` file) and tick **Enforce HTTPS**. The `CNAME` file is
+currently removed so the site can be previewed at the github.io URL without
+redirecting to a domain that does not resolve yet.
 
 ## Notes on how it's built
 
