@@ -1,0 +1,26 @@
+// Design tokens. Change a value here and it updates everywhere.
+:root {
+  --ink:        #08080A;   // page base
+  --ink-raised: #121215;   // raised panels
+  --ink-line:   #26262c;   // hairlines
+  --paper:      #F2EFEA;   // primary text
+  --paper-dim:  #9C9AA0;   // secondary text
+  --ember:      #C1440E;   // the one accent
+  --ember-lift: #E25519;
+
+  --font-display: "Anton", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --gutter: 1.5rem;
+  --measure: 62ch;
+  --shell: 1180px;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.15vw, 0.9rem);
+  --step-0:  clamp(1rem, 0.95rem + 0.24vw, 1.13rem);
+  --step-1:  clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2:  clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+  --step-3:  clamp(2rem, 1.5rem + 2.4vw, 3.4rem);
+  --step-4:  clamp(2.7rem, 1.6rem + 5.2vw, 6rem);
+}
+
+@media (min-width: 40rem) { :root { --gutter: 2.5rem; } }

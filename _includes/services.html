@@ -1,0 +1,20 @@
+<section class="section" id="services">
+  <div class="shell">
+    <p class="eyebrow">Production services</p>
+    <h2 class="section-title">What we make</h2>
+    <p class="lede">{{ site.data.services.intro }}</p>
+
+    <div class="services__grid reveal">
+      {%- for s in site.data.services.items %}
+      <article class="service">
+        <p class="service__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</p>
+        <h3 class="service__title">{{ s.title }}</h3>
+        {%- if s.quote %}
+        <blockquote class="service__quote">{{ s.quote }}</blockquote>
+        {%- endif %}
+        <p class="service__body">{{ s.body }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

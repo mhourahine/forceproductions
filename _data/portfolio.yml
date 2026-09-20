@@ -1,0 +1,151 @@
+# ---------------------------------------------------------------------------
+# Portfolio.
+#
+# Every video listed here was checked and is live. Titles come from YouTube and
+# Vimeo as published. Where a blurb appears, it is quoted from Andy's original
+# post about that project; entries with no surviving write-up have no blurb.
+#
+# TO ADD A VIDEO: copy a block below, change the fields, save.
+#   provider : youtube or vimeo
+#   id       : the video ID. For YouTube it is the part after "v=" or
+#              "youtu.be/". For Vimeo it is the number at the end of the URL.
+#   poster   : the still shown before the video is clicked. Put the image file
+#              in assets/img/portfolio/ and point to it here.
+#   show     : true to display it, false to hide it without deleting it.
+#
+# TO REORDER: move the blocks around. They appear in the order listed here.
+# ---------------------------------------------------------------------------
+
+# --- The reel ------------------------------------------------------------
+- title: 519 Films — 2019 Demo Reel
+  client: Showreel
+  year: 2019
+  provider: vimeo
+  id: "318621433"
+  poster: /assets/img/portfolio/vimeo-318621433.jpg
+  featured: true
+  show: true
+
+# --- Narrative and brand work --------------------------------------------
+- title: MÖBIUS
+  client: Short film
+  year: 2022
+  provider: vimeo
+  id: "761002856"
+  poster: /assets/img/portfolio/vimeo-761002856.jpg
+  show: true
+
+- title: LIKE — A Short Film
+  client: Do You Have Killer Social Media?
+  year: 2017
+  provider: vimeo
+  id: "246847974"
+  poster: /assets/img/portfolio/vimeo-246847974.jpg
+  show: true
+
+- title: What It Takes
+  client: Daniel Gaysinsky, WKF Karate
+  year: 2017
+  provider: vimeo
+  id: "234702198"
+  poster: /assets/img/portfolio/vimeo-234702198.jpg
+  show: true
+
+- title: "#OURSEASON"
+  client: Baseball promo
+  year: 2017
+  provider: vimeo
+  id: "243045696"
+  poster: /assets/img/portfolio/vimeo-243045696.jpg
+  show: true
+
+- title: MOVE
+  client: Sizzle reel
+  year: 2017
+  provider: vimeo
+  id: "242300901"
+  poster: /assets/img/portfolio/vimeo-242300901.jpg
+  show: true
+
+- title: Brick and Mortar — Episode 201
+  client: Series
+  year: 2017
+  provider: vimeo
+  id: "230212976"
+  poster: /assets/img/portfolio/vimeo-230212976.jpg
+  show: true
+
+# --- Client stories ------------------------------------------------------
+- title: Meet Gary — An Avid Golfer with Moderate Fracture Risk
+  client: Osteoporosis Canada / University of Waterloo
+  year: 2016
+  provider: youtube
+  id: WOcbX5Wia4I
+  poster: /assets/img/portfolio/WOcbX5Wia4I.jpg
+  show: true
+  blurb: >-
+    They wanted a video production to help the information take life in the form
+    of both typical and atypical stories about Osteo patients. As with most
+    not-for-profit endeavours, budget and time were of concern. BUT that's where
+    we shine.
+
+- title: How To Fold Your Karate Gi Correctly
+  client: Seishin International / Karate by Jesse
+  year: 2016
+  provider: youtube
+  id: 8yhoV5C3bT8
+  poster: /assets/img/portfolio/8yhoV5C3bT8.jpg
+  show: true
+  blurb: >-
+    Since the philosophy of his company, Seishin International, has always
+    mirrored his own ideas about giving knowledge to make the world a better
+    place, we decided to promote his uniforms by making some instructional
+    videos to help students learn.
+
+- title: Behind the Scenes of Karate Girl BRAWL
+  client: Short film
+  year: 2015
+  provider: vimeo
+  id: "134004504"
+  poster: /assets/img/portfolio/vimeo-134004504.jpg
+  show: true
+  blurb: >-
+    Behind the scenes on the short film BRAWL, written earlier in 2015 and shot
+    in Cambridge and Brantford, Ontario in May.
+
+- title: Kevin Haight Real Estate Excellence
+  client: Cambridge, Ontario
+  year: 2013
+  provider: youtube
+  id: 3J_NEUzU4e8
+  poster: /assets/img/portfolio/3J_NEUzU4e8.jpg
+  show: true
+  blurb: >-
+    My approach to video appeals to agents who believe the house should speak
+    for itself and provide a clean canvas for potential buyers to superimpose
+    their own images of life in the home.
+
+# --- Inbound TV series ---------------------------------------------------
+- title: YOU Should Make a Video
+  client: Inbound TV
+  year: 2013
+  provider: vimeo
+  id: "60138612"
+  poster: /assets/img/portfolio/vimeo-60138612.jpg
+  show: true
+  blurb: >-
+    No matter the culture, level of education, gender, or period in history,
+    human beings are storytellers. It is one of our basic defining
+    characteristics and it is how we learn, make sense of the world, triangulate
+    our identity, and ultimately make decisions.
+
+- title: 3 Part Structure for Video Production Success
+  client: Inbound TV
+  year: 2013
+  provider: vimeo
+  id: "60922263"
+  poster: /assets/img/portfolio/vimeo-60922263.jpg
+  show: true
+  blurb: >-
+    How utilizing a method found in novels, plays, and movies can help your
+    video capture and maintain an audience.

@@ -1,0 +1,20 @@
+{%- comment -%}
+  Click-to-load video facade.
+  Expects: include.item (an entry from _data/portfolio.yml)
+{%- endcomment -%}
+<div class="vid"
+     role="button"
+     tabindex="0"
+     data-provider="{{ include.item.provider }}"
+     data-id="{{ include.item.id }}"
+     data-title="{{ include.item.title | escape }}"
+     aria-label="Play “{{ include.item.title | escape }}”">
+  <img class="vid__poster"
+       src="{{ include.item.poster | relative_url }}"
+       alt="Still frame from {{ include.item.title | escape }}"
+       width="1280" height="720"
+       {% unless include.eager %}loading="lazy" decoding="async"{% endunless %}>
+  <span class="vid__play" aria-hidden="true">
+    <span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+  </span>
+</div>

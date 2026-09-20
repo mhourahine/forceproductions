@@ -1,0 +1,23 @@
+{%- assign work = site.data.portfolio | where: "show", true -%}
+<section class="section" id="work">
+  <div class="shell">
+    <p class="eyebrow">Selected work</p>
+    <h2 class="section-title">The reel</h2>
+
+    <div class="portfolio__grid">
+      {%- for item in work %}
+      <article class="work reveal{% if item.featured %} work--featured{% endif %}">
+        {% include video.html item=item eager=forloop.first %}
+        <p class="work__meta">
+          <span class="work__year">{{ item.year }}</span>
+          {%- if item.client %}<span>{{ item.client }}</span>{% endif %}
+        </p>
+        <h3 class="work__title">{{ item.title }}</h3>
+        {%- if item.blurb %}
+        <p class="work__blurb">{{ item.blurb }}</p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

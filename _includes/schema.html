@@ -1,0 +1,83 @@
+{%- assign work = site.data.portfolio | where: "show", true -%}
+{%- assign sameas = site.data.social | where_exp: "s", "s.url != ''" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "{{ site.url }}/#business",
+      "name": {{ site.title | jsonify }},
+      "slogan": {{ site.tagline | jsonify }},
+      "description": {{ site.description | strip_newlines | strip | jsonify }},
+      "url": "{{ site.url }}/",
+      "email": {{ site.email | jsonify }},
+      "image": "{{ site.url }}/assets/img/site/hero.jpg",
+      "logo": "{{ site.url }}{{ site.logo }}",
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": {{ site.founder | jsonify }},
+        "jobTitle": "Director and Producer",
+        "award": "Queen's Diamond Jubilee Medal"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {{ site.locality | jsonify }},
+        "addressRegion": {{ site.region_code | jsonify }},
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        {%- for a in site.areas_served %}
+        { "@type": "Place", "name": {{ a | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      "knowsAbout": [
+        "Corporate video production",
+        "Documentary filmmaking",
+        "Brand storytelling",
+        "Video marketing",
+        "Event videography"
+      ],
+      "makesOffer": [
+        {%- for s in site.data.services.items %}
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": {{ s.title | jsonify }},
+            "description": {{ s.body | strip_newlines | strip | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]{% if sameas.size > 0 %},
+      "sameAs": [
+        {%- for s in sameas %}
+        {{ s.url | jsonify }}{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]{% endif %}
+    }
+    {%- for item in work -%},
+    {
+      "@type": "VideoObject",
+      "name": {{ item.title | jsonify }},
+      {%- if item.blurb %}
+      "description": {{ item.blurb | strip_newlines | strip | jsonify }},
+      {%- else %}
+      "description": {{ item.title | append: " — a Force Productions video production." | jsonify }},
+      {%- endif %}
+      "thumbnailUrl": "{{ site.url }}{{ item.poster }}",
+      "uploadDate": "{{ item.year }}-01-01",
+      {%- if item.provider == 'vimeo' %}
+      "embedUrl": "https://player.vimeo.com/video/{{ item.id }}",
+      "contentUrl": "https://vimeo.com/{{ item.id }}",
+      {%- else %}
+      "embedUrl": "https://www.youtube-nocookie.com/embed/{{ item.id }}",
+      "contentUrl": "https://www.youtube.com/watch?v={{ item.id }}",
+      {%- endif %}
+      "publisher": { "@id": "{{ site.url }}/#business" }
+    }
+    {%- endfor %}
+  ]
+}
+</script>

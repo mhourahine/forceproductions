@@ -1,0 +1,138 @@
+// ---------- Site header ----------
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 8, 10, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+
+  &.is-stuck { border-bottom-color: var(--ink-line); }
+}
+
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.25rem;
+}
+
+.masthead__logo img {
+  width: auto;
+  height: 1.6rem;
+  filter: invert(1);           // source mark is black; site is dark
+}
+
+.nav {
+  display: none;
+  gap: 1.75rem;
+
+  @media (min-width: 52rem) { display: flex; align-items: center; }
+}
+
+.nav a {
+  font-size: var(--step--1);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--paper-dim);
+  transition: color 0.2s ease;
+
+  &:hover { color: var(--paper); }
+}
+
+.nav .btn { color: #fff; }
+
+// ---------- Hero ----------
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(30rem, 88svh, 52rem);
+  padding-block: clamp(3rem, 10vh, 7rem);
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: grayscale(0.7) contrast(1.05) brightness(0.55);
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, var(--ink) 4%, rgba(8, 8, 10, 0.55) 45%, rgba(8, 8, 10, 0.75) 100%),
+    linear-gradient(to right, rgba(8, 8, 10, 0.85), transparent 70%);
+}
+
+.hero__inner { position: relative; }
+
+.hero__tagline {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin: 0 0 1.2rem;
+}
+
+.hero__title {
+  font-size: var(--step-4);
+  max-width: 14ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title em {
+  font-style: normal;
+  display: block;
+  color: var(--paper-dim);
+}
+
+.hero__sub {
+  font-size: var(--step-1);
+  max-width: 44ch;
+  color: var(--paper);
+  margin-bottom: 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+// ---------- Footer ----------
+.footer {
+  border-top: 1px solid var(--ink-line);
+  padding-block: 3rem 2.5rem;
+  color: var(--paper-dim);
+  font-size: var(--step--1);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (min-width: 46rem) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__logo img {
+  height: 1.4rem;
+  width: auto;
+  filter: invert(1);
+  opacity: 0.75;
+}

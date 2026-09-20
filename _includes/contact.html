@@ -1,0 +1,20 @@
+<section class="section" id="contact">
+  <div class="shell contact">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="contact__title">Let's tell your story</h2>
+    <p class="contact__lede">
+      Whether it is a service that can change lives, a person who makes a
+      difference, or a company looking to stand out from the crowd and be heard,
+      Force Productions loves to share stories and ignite inspiration.
+    </p>
+
+    <a class="contact__email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+
+    {% include social.html %}
+
+    <p class="contact__where">
+      {{ site.locality }}, {{ site.region }} &middot; Serving
+      {{ site.areas_served | join: " &middot; " }}
+    </p>
+  </div>
+</section>

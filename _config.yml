@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------------------
+# Force Productions — site settings
+# Edit the values in this file to change site-wide details.
+# After any edit here, the site rebuilds automatically on GitHub.
+# ---------------------------------------------------------------------------
+
+title: Force Productions
+tagline: Stories that Spark Conversation.
+description: >-
+  Video production in Cambridge, Kitchener and Waterloo, Ontario. Force
+  Productions creates visual stories that spark conversation and initiate
+  positive change.
+
+url: "https://forceproductions.ca"
+baseurl: ""
+lang: en-CA
+
+# --- Contact -------------------------------------------------------------
+# This address is used for the contact button and in the search-engine data.
+email: andy@forceproductions.ca
+
+# --- Who / where ---------------------------------------------------------
+founder: Andy Hourahine
+locality: Cambridge
+region: Ontario
+region_code: ON
+country: Canada
+areas_served:
+  - Cambridge
+  - Kitchener
+  - Waterloo
+  - Waterloo Region
+  - Guelph
+  - Brantford
+  - Southern Ontario
+
+logo: /assets/img/site/logo-full.png
+
+# --- Build ---------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+  sass_dir: _sass
+  sourcemap: never
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/site/og-image.jpg

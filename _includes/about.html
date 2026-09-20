@@ -1,0 +1,48 @@
+<section class="section" id="about">
+  <div class="shell">
+    <p class="eyebrow">About</p>
+    <div class="about__grid">
+      <figure class="about__portrait reveal" style="margin:0">
+        <img src="{{ site.data.about.portrait | relative_url }}"
+             alt="{{ site.data.about.portrait_alt }}"
+             width="1600" height="1081" loading="lazy" decoding="async">
+      </figure>
+
+      <div class="about__body reveal">
+        <h2 class="section-title">Your story is waiting</h2>
+        <p>{{ site.data.about.mission }}</p>
+        <h3 class="about__name">{{ site.founder }}</h3>
+        <p>{{ site.data.about.founder_bio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="clients">
+  <div class="shell">
+    <p class="eyebrow">Clients</p>
+    <h2 class="section-title">Who we've worked with</h2>
+    <p class="lede">{{ site.data.about.clients_intro }}</p>
+    <ul class="clients__list reveal">
+      {%- for c in site.data.clients %}
+      <li>{{ c }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- if site.data.testimonial %}
+<section class="section" id="testimonial">
+  <div class="shell testimonial reveal">
+    <p class="eyebrow">In their words</p>
+    <blockquote>
+      <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+      <p>{{ site.data.testimonial.quote }}</p>
+      <cite class="testimonial__cite">
+        <strong>{{ site.data.testimonial.attribution }}</strong>
+        {{ site.data.testimonial.role }}
+      </cite>
+    </blockquote>
+  </div>
+</section>
+{%- endif %}

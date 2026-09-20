@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Social links.
+#
+# TO ADD A LINK: paste the full URL after the colon and save.
+# TO HIDE A LINK: leave it blank (or delete the line). Blank ones simply do
+# not appear on the site — no other change needed.
+# ---------------------------------------------------------------------------
+
+- name: Vimeo
+  icon: vimeo
+  url: "https://vimeopro.com/user3208094/force-productions"
+
+- name: YouTube
+  icon: youtube
+  url: ""
+
+- name: Instagram
+  icon: instagram
+  url: ""
+
+- name: LinkedIn
+  icon: linkedin
+  url: ""
+
+- name: Facebook
+  icon: facebook
+  url: ""
